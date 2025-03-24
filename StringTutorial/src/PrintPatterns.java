@@ -1,7 +1,7 @@
 public class PrintPatterns {
     public static void main(String[] args) {
 
-        Pattern28(5);
+        Pattern4(5);
     }
 
     // TO SOLVE ANY PATTERNS PROBLEM FOLLOW BELOW 3 STEPS

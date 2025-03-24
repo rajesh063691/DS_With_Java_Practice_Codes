@@ -4,7 +4,7 @@ public class BinarySerachAlgo {
                 1, 2, 3, 4, 5, 6
         };
 
-        int target = 1;
+        int target = 4;
         //int fIndex = BinSearch(barr, 0, barr.length - 1, target);
         int fIndex = BinSearchIteration(barr, target);
         System.out.printf("Element %d found at index %d", target, fIndex);
@@ -30,24 +30,24 @@ public class BinarySerachAlgo {
     }
 
     // through recursion approach
-//    static int BinSearch(int[] arr, int start, int end, int target) {
-//        if (arr.length == 0) {
-//            return -1;
-//        }
-//        if (start <= end) {
-//            int mid = (start + end) / 2;
-//            if (arr[mid] == target) {
-//                return mid;
-//            }
-//            if (arr[mid] > target) {
-//                end = mid - 1;
-//                return BinSearch(arr, start, end, target);
-//            } else {
-//                start = mid + 1;
-//                return BinSearch(arr, start, end, target);
-//            }
-//        }
-//
-//        return -1;
-//    }
+    static int BinSearch(int[] arr, int start, int end, int target) {
+        if (arr.length == 0) {
+            return -1;
+        }
+        if (start <= end) {
+            int mid = (start + end) / 2;
+            if (arr[mid] == target) {
+                return mid;
+            }
+            if (arr[mid] > target) {
+                end = mid - 1;
+                return BinSearch(arr, start, end, target);
+            } else {
+                start = mid + 1;
+                return BinSearch(arr, start, end, target);
+            }
+        }
+
+        return -1;
+    }
 }
